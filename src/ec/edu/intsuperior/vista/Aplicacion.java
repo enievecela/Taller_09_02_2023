@@ -4,10 +4,17 @@ package ec.edu.intsuperior.vista;
 import java.util.Scanner;
 
 public class Aplicacion {
+    
+    /*
+    este es el metodo principal debido a que
+   aqui se invoca a todos los demas metodos que 
+         quiero que se ejecunten
+    */
     public static void main(String[] args) {
-            desintegrarNumero();
+           System.out.println(retornarEdad()); //invoca al metodo desintegrar
     }
  
+    //crea un método
     public static void promedios(){
         
        Scanner leer= new Scanner(System.in);
@@ -51,7 +58,6 @@ public class Aplicacion {
        }
         System.out.println("el factorial de: "+num+" es:"+fac);
     }
-
     public static void sumaDosNumeros(){
         Scanner leer = new Scanner(System.in);
         int n1,n2;
@@ -61,7 +67,6 @@ public class Aplicacion {
         n2=leer.nextInt();
         System.out.println("La suma es: "+(n1+n2));
     }
-    
     public static void generarNumerosEnteros(){
         Scanner leer= new Scanner(System.in);
         int n1, n2;
@@ -73,7 +78,6 @@ public class Aplicacion {
             System.out.print(i+1+" ");
         }
     }
-    
     public static void desintegrarNumero(){
         Scanner leer = new Scanner(System.in);
         int num,aux=0;
@@ -87,4 +91,15 @@ public class Aplicacion {
         System.out.println(aux+"    "+num);
        }
     }
+    public static int retornarEdad(){
+       Scanner leer= new Scanner(System.in);
+        int x, ac=2023,edad;
+        float y;
+        double z;
+        System.out.println("Ingresa el año de nacimiento");
+        x=leer.nextInt();
+        edad=ac-x;
+        return edad;
+    }
+    
 }
