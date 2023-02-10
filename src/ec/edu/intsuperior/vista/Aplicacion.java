@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Aplicacion {
     public static void main(String[] args) {
-             sumaDosNumeros();
+             generarNumerosEnteros();
     }
  
     public static void promedios(){
@@ -60,5 +60,17 @@ public class Aplicacion {
         System.out.println("Ingresa el numero 2:");
         n2=leer.nextInt();
         System.out.println("La suma es: "+(n1+n2));
+    }
+    
+    public static void generarNumerosEnteros(){
+        Scanner leer= new Scanner(System.in);
+        int n1, n2;
+        System.out.println("Ingresa el limite inferior");
+        n1=leer.nextInt();
+        System.out.println("Ingresa el numero superior mayor a:"+n1);
+        n2=leer.nextInt();
+        for(int i=n1;i<(n2-1);i++){
+            System.out.print(i+1+" ");
+        }
     }
 }
