@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Aplicacion {
     public static void main(String[] args) {
-             generarNumerosEnteros();
+            desintegrarNumero();
     }
  
     public static void promedios(){
@@ -72,5 +72,19 @@ public class Aplicacion {
         for(int i=n1;i<(n2-1);i++){
             System.out.print(i+1+" ");
         }
+    }
+    
+    public static void desintegrarNumero(){
+        Scanner leer = new Scanner(System.in);
+        int num,aux=0;
+        System.out.println("Ingresa un numero positivo");
+        num= leer.nextInt();
+       
+        //aux=numero-numero/10*10;
+       while(num>aux){
+        aux=num%10;
+        num=num/10;
+        System.out.println(aux+"    "+num);
+       }
     }
 }
