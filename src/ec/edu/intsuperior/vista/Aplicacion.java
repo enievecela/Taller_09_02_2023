@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Aplicacion {
     public static void main(String[] args) {
-             factorial();
+             sumaDosNumeros();
     }
  
     public static void promedios(){
@@ -52,4 +52,13 @@ public class Aplicacion {
         System.out.println("el factorial de: "+num+" es:"+fac);
     }
 
+    public static void sumaDosNumeros(){
+        Scanner leer = new Scanner(System.in);
+        int n1,n2;
+        System.out.println("Ingresa el numero 1:");
+        n1=leer.nextInt();
+        System.out.println("Ingresa el numero 2:");
+        n2=leer.nextInt();
+        System.out.println("La suma es: "+(n1+n2));
+    }
 }
